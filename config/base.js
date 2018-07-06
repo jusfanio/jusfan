@@ -9,9 +9,18 @@ const baseConf = (_path) => {
     // and add path and name to entry array
     const VENDORS_NAME = 'vendors';
     const entry = {
-        index: ['babel-polyfill', './src/index/index.js']
-    };
-
+        index: ['babel-polyfill', './src/index/index.js'],
+        lesson_7: ['./src/lesson_7/lesson_7.js'],
+        lesson_9: ['./src/lesson_9/lesson_9.js'],
+        hw_lesson_9: ['./src/hw_lesson_9/hw_lesson_9.js'],
+        hw_10: ['./src/hw_10/hw_10.js'],
+        hw_10_js: ['./src/hw_10_js/hw_10_js.js'],
+        hw_11_menu_accord: ['./src/hw_11_menu_accord/hw_11_menu_accord.js'],
+        hw_12: ['./src/hw_12/hw_12.js'],
+        hw_13: ['./src/hw_13/hw_13.js'],
+        hw_9: ['./src/hw_9/hw_9.js'],
+        hw_14: ['./src/hw_14/hw_14.js'],
+}
     const plugins = Object.keys(entry).reduce((acc, name) => {
         acc.push(new HtmlWebpackPlugin({
             chunksSortMode: 'manual',
